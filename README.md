@@ -28,13 +28,15 @@ A tabela abaixo descreve a estrutura da fonte de dados utilizada antes do proces
 | **Year** | Número Inteiro (Integer) | Ano da transação. |
 
 ## 🛠️ Etapas do Projeto
-1. **Limpeza e Transformação:** Processamento dos dados no Power Query para garantir a integridade das informações.
-2. **Modelagem Multidimensional:** 
+#### 1.**Limpeza e Transformação:** 
+- Processamento dos dados no Power Query para garantir a integridade das informações.
+#### 2.**Modelagem Multidimensional:** 
 - Criação da tabela **Fato** (`f_Vendas`).
 - Criação das tabelas de **Dimensão** (`d_Produtos`, `d_Calendario`, `d_Segmentos`, `d_Localidade`).
-3. **Criação de Medidas DAX:** 
+#### 2.**Criação de Medidas DAX:** 
 - Desenvolvimento de KPIs essenciais como Total de Vendas, Lucro Total e métricas comparativas de tempo.
-4. **Visualização:** Construção de um Dashboard interativo com filtros e visuais que facilitam a tomada de decisão.
+#### 3. **Visualização:** 
+- Construção de um Dashboard interativo com filtros e visuais que facilitam a tomada de decisão.
 
 ## Relatório de Execução: Modelagem Dimensional Star Schema
 
