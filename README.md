@@ -29,10 +29,75 @@ A tabela abaixo descreve a estrutura da fonte de dados utilizada antes do proces
 
 ## 🛠️ Etapas do Projeto
 1. **Limpeza e Transformação:** Processamento dos dados no Power Query para garantir a integridade das informações.
-2. **Modelagem Multidimensional:** - Criação da tabela **Fato** (`f_Vendas`).
-   - Criação das tabelas de **Dimensão** (`d_Produtos`, `d_Calendario`, `d_Segmentos`, `d_Localidade`).
-3. **Criação de Medidas DAX:** Desenvolvimento de KPIs essenciais como Total de Vendas, Lucro Total e métricas comparativas de tempo.
+2. **Modelagem Multidimensional:** 
+- Criação da tabela **Fato** (`f_Vendas`).
+- Criação das tabelas de **Dimensão** (`d_Produtos`, `d_Calendario`, `d_Segmentos`, `d_Localidade`).
+3. **Criação de Medidas DAX:** 
+- Desenvolvimento de KPIs essenciais como Total de Vendas, Lucro Total e métricas comparativas de tempo.
 4. **Visualização:** Construção de um Dashboard interativo com filtros e visuais que facilitam a tomada de decisão.
+
+## Relatório de Execução: Modelagem Dimensional Star Schema
+
+### 1. Processo de ETL e Transformação (Power Query)
+
+#### Governança da Fonte
+
+- Seguindo o roteiro do desafio, as tabelas foram criadas a partir de referências à tabela original para garantir a linhagem dos dados.
+- A tabela original foi preservada como `Financials_origem`.
+- **Configuração:** A carga desta tabela foi desabilitada para otimizar o consumo de memória do motor VertiPaq.
+
+### Criação das Tabelas de Dimensão (D_)
+
+- Financials_origem (modo oculto – backup)
+- D_Produtos (ID_produto, Produto, Média de Unidades Vendidas, Médias do valor de vendas, Mediana do valor de vendas, Valor máximo de Venda, Valor mínimo de Venda)
+- D_Produtos_Detalhes(ID_produtos, Discount Band, Sale Price,  Units Sold, Manufactoring Price)
+- D_Descontos (ID_produto, Discount, Discount Band)
+- D_Detalhes (Products, Country, Vendas_Brutas, Descontos, Vendas Líquidas, Custo_Mercadoria, Lucro)
+- D_Calendário – Criada por DAX com calendar()
+- F_Vendas (SK_ID , ID_Produto, Produto, Units Sold, Sales Price, Discount  Band, Segment, Country, Salers, Profit, Date (campos))
+
+Detalhes dos agrupamentos da tabela **D_Detalhes**:
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-04-17-14-54-19.png" alt="" width="480">
+</p>
+
+## 3. Modelagem de Dados e DAX
+
+### Inteligência de Tempo
+A tabela **D_Calendário** foi criada do zero utilizando DAX para permitir filtros temporais dinâmicos e comparativos de período (Time Intelligence).
+* **Funções utilizadas:** `CALENDAR()`, `ADDCOLUMNS()`, `FORMAT()`.
+
+```DAX
+D_Calendario = 
+VAR DataMinima = MIN(F_Vendas[Date])
+VAR DataMaxima = MAX(F_Vendas[Date])
+RETURN
+ADDCOLUMNS (
+    CALENDAR(DataMinima, DataMaxima),
+    "Ano", YEAR([Date]),
+    "Mês n.º", MONTH([Date]),
+    "Nome do Mês", FORMAT([Date], "MMMM"),
+    "Trimestre", "T" & QUARTER([Date]),
+    "Dia da Semana", FORMAT([Date], "DDDD"),
+    "Mês/Ano", FORMAT([Date], "MMM/YYYY")
+)
+```
+
+### Arquitetura Star Schema
+No ambiente de modelagem, as relações foram configuradas com cardinalidade **1:N (Um para Muitos)** e direção de filtro único, onde as dimensões filtram a fato.
+
+| Tabela | Função | Chave de Ligação |
+| :--- | :--- | :--- |
+| **f_Vendas** | Fato | SK_ID (PK) |
+| **d_Produtos** | Dimensão | ID_produto |
+| **d_Calendário** | Dimensão | Date |
+| **d_Descontos** | Dimensão | Discount Band / Product |
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-04-17-14-59-32.png" alt="" width="1024">
+</p>
+
 
 ## 🚀 Como Visualizar
 1. Clone este repositório.
