@@ -50,7 +50,7 @@ A tabela abaixo descreve a estrutura da fonte de dados utilizada antes do proces
 
 - Financials_origem (modo oculto – backup)
 - D_Produtos (ID_produto, Produto, Média de Unidades Vendidas, Médias do valor de vendas, Mediana do valor de vendas, Valor máximo de Venda, Valor mínimo de Venda)
-- D_Produtos_Detalhes(ID_produtos, Discount Band, Sale Price,  Units Sold, Manufactoring Price)
+- D_Detalhes(ID_produtos, Discount Band, Sale Price,  Units Sold, Manufactoring Price)
 - D_Descontos (ID_produto, Discount, Discount Band)
 - D_Detalhes (Products, Country, Vendas_Brutas, Descontos, Vendas Líquidas, Custo_Mercadoria, Lucro)
 - D_Calendário – Criada por DAX com calendar()
