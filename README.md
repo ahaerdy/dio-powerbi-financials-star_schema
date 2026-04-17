@@ -63,7 +63,7 @@ Detalhes dos agrupamentos da tabela **D_Detalhes**:
 ### Modelagem de Dados e DAX
 
 #### Inteligência de Tempo
-A tabela **D_Calendário** foi criada do zero utilizando DAX para permitir filtros temporais dinâmicos e comparativos de período (Time Intelligence).
+A tabela **D_Calendario** foi criada do zero utilizando DAX para permitir filtros temporais dinâmicos e comparativos de período (Time Intelligence).
 
 ```DAX
 D_Calendario = 
