@@ -28,22 +28,23 @@ A tabela abaixo descreve a estrutura da fonte de dados utilizada antes do proces
 | **Year** | Número Inteiro (Integer) | Ano da transação. |
 
 ## 🛠️ Etapas do Projeto
-#### **1 - Limpeza e Transformação:** 
+
+### **1. Limpeza e Transformação:** 
 - Processamento dos dados no Power Query para garantir a integridade das informações.
-#### **2 - Modelagem Multidimensional:** 
-- Criação da tabela **Fato** (`f_Vendas`).
-- Criação das tabelas de **Dimensão** (`d_Produtos`, `d_Calendario`, `d_Segmentos`, `d_Localidade`).
+### **2 - Modelagem Multidimensional:** 
+- Criação da tabela **Fato** (`F_Vendas`).
+- Criação das tabelas de **Dimensão** (`D_Descontos`, `D_Detalhes`, `D_Produtos`, `D_Descontos`).
 #### **3 - Criação de Medidas DAX:** 
-- Desenvolvimento de KPIs essenciais como Total de Vendas, Lucro Total e métricas comparativas de tempo.
+- Tabela de dimensão de tempo.
 #### **4 - Visualização:** 
-- Construção de um Dashboard interativo com filtros e visuais que facilitam a tomada de decisão.
+- Modelo visual com tabela fato centralizada, rodeada e filtrada pelas tabelas de dimensão.
 
 ## Relatório de Execução: Modelagem Dimensional Star Schema
 
 ### 1. Processo de ETL e Transformação (Power Query)
 
 #### Governança da Fonte
-
+Desenvolvimento de KPIs essenciais como Total de Vendas, Lucro Total e métricas comparativas de tempo.
 - Seguindo o roteiro do desafio, as tabelas foram criadas a partir de referências à tabela original para garantir a linhagem dos dados.
 - A tabela original foi preservada como `Financials_origem`.
 - **Configuração:** A carga desta tabela foi desabilitada para otimizar o consumo de memória do motor VertiPaq.
