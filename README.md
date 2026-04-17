@@ -29,10 +29,10 @@ A tabela abaixo descreve a estrutura da fonte de dados utilizada antes do proces
 
 ## 🛠️ Etapas do Projeto
 
-1. **Limpeza e Transformação:**:Processamento dos dados no Power Query para garantir a integridade das informações.
-2. **Modelagem Multidimensional:** Criação da tabela **Fato** (`F_Vendas`) e das tabelas de **Dimensão** (`D_Descontos`, `D_Detalhes`, `D_Produtos`, `D_Descontos`).
-3. **Criação de Medidas DAX:** tabela dimensional de tempo.
-4. **Visualização:**  modelo visual com tabela fato centralizada, rodeada e filtrada pelas tabelas de dimensão.
+1. **Limpeza e Transformação:** processamento dos dados no Power Query para garantir a integridade das informações.
+2. **Modelagem Multidimensional:** criação da tabela **Fato** (`F_Vendas`) e das tabelas de **Dimensão** (`D_Descontos`, `D_Detalhes`, `D_Produtos`, `D_Descontos`).
+3. **Medidas DAX:** criação da tabela dimensional de tempo.
+4. **Visualização:**  apresentaçào do modelo Star Schema com tabela fato centralizada, rodeada e filtrada pelas tabelas de dimensão.
 
 ## Relatório de Execução: Modelagem Dimensional Star Schema
 
