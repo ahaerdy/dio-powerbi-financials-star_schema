@@ -32,7 +32,7 @@ A tabela abaixo descreve a estrutura da fonte de dados utilizada antes do proces
 1. **Limpeza e Transformação:** processamento dos dados no Power Query para garantir a integridade das informações.
 2. **Modelagem Multidimensional:** criação da tabela **Fato** (`F_Vendas`) e das tabelas de **Dimensão** (`D_Descontos`, `D_Detalhes`, `D_Produtos`).
 3. **Medidas DAX:** criação da tabela dimensional de tempo (`D_Calendario`)
-4. **Visualização:**  apresentaçào do modelo com a tabela fato centralizada, rodeada e filtrada pelas tabelas de dimensão.
+4. **Visualização:**  apresentação do modelo com a tabela fato centralizada, rodeada e filtrada pelas tabelas de dimensão.
 
 ## Relatório de Execução: Modelagem Dimensional Star Schema
 
