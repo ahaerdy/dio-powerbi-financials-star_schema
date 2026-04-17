@@ -36,15 +36,15 @@ A tabela abaixo descreve a estrutura da fonte de dados utilizada antes do proces
 
 ## Relatório de Execução: Modelagem Dimensional Star Schema
 
-### 1. Processo de ETL e Transformação (Power Query)
+### Processo de ETL e Transformação (Power Query)
 
-#### Governança da Fonte
+### Governança da Fonte
 Desenvolvimento de KPIs essenciais como Total de Vendas, Lucro Total e métricas comparativas de tempo.
 - Seguindo o roteiro do desafio, as tabelas foram criadas a partir de referências à tabela original para garantir a linhagem dos dados.
 - A tabela original foi preservada como `Financials_origem`.
 - **Configuração:** A carga desta tabela foi desabilitada para otimizar o consumo de memória do motor VertiPaq.
 
-### Criação das Tabelas de Dimensão (D_)
+### Criação das Tabelas de Dimensão
 
 - Financials_origem (modo oculto – backup)
 - D_Produtos (ID_produto, Produto, Média de Unidades Vendidas, Médias do valor de vendas, Mediana do valor de vendas, Valor máximo de Venda, Valor mínimo de Venda)
@@ -60,7 +60,7 @@ Detalhes dos agrupamentos da tabela **D_Detalhes**:
   <img src="000-Midia_e_Anexos/2026-04-17-14-54-19.png" alt="" width="480">
 </p>
 
-## 3. Modelagem de Dados e DAX
+## Modelagem de Dados e DAX
 
 ### Inteligência de Tempo
 A tabela **D_Calendário** foi criada do zero utilizando DAX para permitir filtros temporais dinâmicos e comparativos de período (Time Intelligence).
@@ -86,10 +86,11 @@ No ambiente de modelagem, as relações foram configuradas com cardinalidade **1
 
 | Tabela | Função | Chave de Ligação |
 | :--- | :--- | :--- |
-| **f_Vendas** | Fato | SK_ID (PK) |
-| **d_Produtos** | Dimensão | ID_produto |
-| **d_Calendário** | Dimensão | Date |
-| **d_Descontos** | Dimensão | Discount Band / Product |
+| **F_Vendas** | Fato | SK_ID (PK) |
+| **D_Produtos** | Dimensão | ID_produto |
+| **D_Detalhes** | Dimensão | ID_produto |
+| **D_Descontos** | Dimensão | Discount Band / Product |
+| **D_Calendário** | Dimensão | Date |
 
 <p align="center">
   <img src="000-Midia_e_Anexos/2026-04-17-15-06-24.png" alt="" width="1024">
