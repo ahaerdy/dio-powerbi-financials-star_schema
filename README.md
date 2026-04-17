@@ -66,7 +66,6 @@ Detalhes dos agrupamentos da tabela **D_Detalhes**:
 
 ### Inteligência de Tempo
 A tabela **D_Calendário** foi criada do zero utilizando DAX para permitir filtros temporais dinâmicos e comparativos de período (Time Intelligence).
-* **Funções utilizadas:** `CALENDAR()`, `ADDCOLUMNS()`, `FORMAT()`.
 
 ```DAX
 D_Calendario = 
@@ -95,9 +94,8 @@ No ambiente de modelagem, as relações foram configuradas com cardinalidade **1
 | **d_Descontos** | Dimensão | Discount Band / Product |
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-04-17-14-59-32.png" alt="" width="1024">
+  <img src="000-Midia_e_Anexos/2026-04-17-15-06-24.png" alt="" width="480">
 </p>
-
 
 ## 🚀 Como Visualizar
 1. Clone este repositório.
