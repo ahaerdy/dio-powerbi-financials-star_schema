@@ -1,7 +1,7 @@
 # Modelagem de Dashboard de E-commerce com Power BI - Star Schema
 
 ## 📌 Descrição do Projeto
-Este repositório contém o desenvolvimento do desafio de modelagem de dados proposto no Bootcamp NTT DATA - Engenharia de Dados com Python. O projeto consiste em processar uma base de dados financeira bruta (`Financial_Sample.xlsx`) e estruturá-la seguindo as melhores práticas de Business Intelligence, utilizando o modelo **Star Schema** (Esquema Estrela).
+Este repositório contém o desenvolvimento do desafio de modelagem de dados proposto no Bootcamp NTT DATA - Engenharia de Dados com Python. O projeto consiste em processar uma base de dados financeira bruta (`financial_sample.xlsx`) e estruturá-la seguindo as melhores práticas de Business Intelligence, utilizando o modelo **Star Schema** (Esquema Estrela).
 
 O foco principal é a transição de uma tabela única (flat file) para um modelo multidimensional, visando otimizar a performance do dashboard e facilitar a criação de cálculos complexos via DAX.
 
