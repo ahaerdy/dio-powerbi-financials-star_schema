@@ -94,7 +94,7 @@ No ambiente de modelagem, as relações foram configuradas com cardinalidade **1
 | **d_Descontos** | Dimensão | Discount Band / Product |
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-04-17-15-06-24.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-04-17-15-06-24.png" alt="" width="1024">
 </p>
 
 ## 🚀 Como Visualizar
