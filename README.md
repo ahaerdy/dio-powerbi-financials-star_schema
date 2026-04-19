@@ -141,6 +141,32 @@ Tabela central do Star Schema, contendo todas as transações com suas métricas
 
 ---
 
+## Papel Central da F_Vendas no Star Schema
+
+A **F_Vendas é a tabela fato** — o coração do modelo. Enquanto as tabelas dimensão descrevem **o quê** (produtos, datas, descontos, segmentos), a F_Vendas registra **o que aconteceu**: cada transação de venda realizada.
+
+Cada uma de suas 700 linhas representa uma transação única — uma venda de um produto específico, em um país, segmento e data determinados.
+
+Suas colunas se dividem em dois tipos:
+
+**Chaves — ligam a F_Vendas às dimensões:**
+- `SK_ID` — identifica unicamente cada transação
+- `ID_Produto` — conecta a D_Produtos, D_Produtos_Detalhes e D_Descontos
+- `Date` — conecta a D_Calendário
+- `Discount Band` — conecta a D_Descontos
+
+**Métricas — os números que serão analisados:**
+- `Units Sold`, `Sale Price`, `Gross Sales`, `Sales`, `COGS`, `Profit`
+
+As tabelas dimensão **filtram e classificam**; a F_Vendas **responde às perguntas**. Por exemplo:
+- *"Qual o lucro total por país em 2014?"* → Power BI filtra pela D_Calendário (2014) e soma `Profit` da F_Vendas
+- *"Quantas unidades do Paseo foram vendidas com desconto Low?"* → filtra por D_Produtos e D_Descontos, soma `Units Sold` da F_Vendas
+
+Sem a F_Vendas, as dimensões seriam apenas cadastros isolados sem nada para medir.
+
+
+---
+
 ## ⚙️ Etapas e Funcionalidades Utilizadas
 
 ### Power Query
