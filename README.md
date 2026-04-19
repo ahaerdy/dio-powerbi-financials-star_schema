@@ -141,7 +141,7 @@ Tabela central do Star Schema, contendo todas as transações com suas métricas
 
 ---
 
-## Papel Central da F_Vendas no Star Schema
+## 🎯 Papel Central da F_Vendas no Star Schema
 
 A **F_Vendas é a tabela fato** — o coração do modelo. Enquanto as tabelas dimensão descrevem **o quê** (produtos, datas, descontos, segmentos), a F_Vendas registra **o que aconteceu**: cada transação de venda realizada.
 
