@@ -219,7 +219,6 @@ Sem a F_Vendas, as dimensões seriam apenas cadastros isolados sem nada para med
 ```
 ├── financial_sample.xlsx                    # Fonte de dados original
 ├── dio-power_bi-financials-star_schema.pbix # Arquivo Power BI com o modelo completo
-├── star_schema.png                          # Print do diagrama Star Schema
 └── README.md                                # Este arquivo
 ```
 
