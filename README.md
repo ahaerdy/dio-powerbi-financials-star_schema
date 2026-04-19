@@ -175,6 +175,10 @@ Tabela central do Star Schema, contendo todas as transações com suas métricas
 | F_Vendas | Discount Band | D_Descontos | Discount Band | *:1 |
 | F_Vendas | Date | D_Calendário | Date | *:1 |
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-04-19-15-11-57.png" alt="" width="1024">
+</p>
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas
