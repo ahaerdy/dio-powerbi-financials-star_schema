@@ -190,8 +190,6 @@ Sem a F_Vendas, as dimensões seriam apenas cadastros isolados sem nada para med
 
 ## 🌟 Star Schema — Diagrama do Modelo
 
-![Star Schema](star_schema.png)
-
 ### Relacionamentos
 
 | Tabela Fato | Coluna | Tabela Dimensão | Coluna | Cardinalidade |
