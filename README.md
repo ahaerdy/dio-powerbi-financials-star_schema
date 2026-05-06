@@ -224,8 +224,8 @@ Sem a F_Vendas, as dimensões seriam apenas cadastros isolados sem nada para med
 
 ---
 
-## 📚 Referências
+## Referências
 
-- [DIO — Bootcamp NTT Data Engenharia de Dados com Python](https://web.dio.me/track/engenharia-dados-python)
 - [Microsoft — Documentação Power BI](https://learn.microsoft.com/pt-br/power-bi/)
 - [Microsoft — Referência DAX](https://learn.microsoft.com/pt-br/dax/)
+- [Repositório de Estudos – Bootcamp NTT DATA - Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python#-reposit%C3%B3rio-de-estudos--bootcamp-ntt-data-engenharia-de-dados-com-python)
